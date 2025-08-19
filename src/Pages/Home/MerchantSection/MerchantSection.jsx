@@ -3,7 +3,7 @@ import merchantImg from "../../../assets/location-merchant.png"; // replace with
 
 const MerchantSection = () => {
   return (
-    <section className="w-full px-6 bg md:px-12 py-8 my-8 bg-[#03373D]">
+    <section data-aos="flip-up" className="w-full px-6 bg-no-repeat bg-[url('assets/be-a-merchant-bg.png')] md:px-12 py-8 my-8 bg-[#03373D]">
       <div className="flex flex-col-reverse md:flex-row items-center gap-8">
         
         {/* Left text */}
