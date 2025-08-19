@@ -32,7 +32,7 @@ const FeatureSection = () => {
       {sections.map((item, index) => (
         <div
           key={index}
-          className="flex bg-white shadow flex-col md:flex-row items-center gap-4"
+          className="flex bg-white shadow flex-col md:flex-row items-center gap-"
         >
           {/* Left image */}
           <div className="w-full md:w-1/2 flex justify-center">
