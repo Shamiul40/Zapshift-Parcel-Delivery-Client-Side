@@ -10,10 +10,12 @@ const AuthLayout = () => {
         <ProfastLogo></ProfastLogo>
       </div>
       <div className="hero-content flex-col lg:flex-row-reverse">
-        <img
+        <div className="flex-1">
+          <img
           src={authImage}
-          className="max-w-sm flex-1 rounded-lg shadow-2xl"
+          className="max-w-sm rounded-lg shadow-2xl"
         />
+        </div>
         <div className="flex-1">
           <Outlet></Outlet>
         </div>
