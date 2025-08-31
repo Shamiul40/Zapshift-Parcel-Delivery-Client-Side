@@ -1,7 +1,8 @@
 import React from "react";
 import { useForm } from "react-hook-form";
-import { data } from "react-router";
+import { data, Link } from "react-router";
 import useAuth from "../../../Hooks/useAuth";
+import SocialLogin from "../../../SocialLogin/SocialLogin";
 
 const Regiser = () => {
   const {
@@ -13,7 +14,14 @@ const Regiser = () => {
 
   const onSubmit = (data) => {
     console.log(data);
-    console.log(createUser)
+
+    createUser(data.email, data.password)
+    .then(result =>{
+      console.log(result.user)
+    })
+    .catch(error =>{
+      console.log(error)
+    })
   };
   return (
     <div className="card bg-base-100 w-full max-w-sm shrink-0 shadow-2xl">
@@ -47,6 +55,8 @@ const Regiser = () => {
             </div>
             <button className="btn btn-neutral mt-4">Register</button>
           </fieldset>
+          <p><small>already have an account? <Link className="btn" to="/login">Login</Link></small></p>
+          <SocialLogin></SocialLogin>
         </form>
       </div>
     </div>

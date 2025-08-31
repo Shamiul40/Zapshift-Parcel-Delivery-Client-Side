@@ -3,6 +3,7 @@
 @import "tailwindcss";
 @plugin "daisyui";
 
+@import "leaflet/dist/leaflet.css";
 
 .urbanist {
   font-family: "Urbanist", sans-serif;
