@@ -15,7 +15,11 @@ L.Icon.Default.mergeOptions({
 });
 
 
-const BangladeshMap = () => {
+const BangladeshMap = ({search}) => {
+
+  const filterDistricts = search ? districts.filter(dist =>
+    dist.district.toLowerCase().includes(search.toLowerCase())
+  ) : districts
   return (
     <div className="p-4">
       <MapContainer
@@ -30,7 +34,7 @@ const BangladeshMap = () => {
         />
 
         {/* Markers for each district */}
-        {districts.map((item, idx) => (
+        {filterDistricts.map((item, idx) => (
           <Marker
             key={idx}
             position={[item.latitude, item.longitude]}
